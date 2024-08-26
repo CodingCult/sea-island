@@ -27,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Run ESLint
-        run: npm run lint
+        run: npm run lint -- --format html -o eslint-report.html
 
       - name: Upload ESLint report
         if: failure() # Only upload if the previous step fails

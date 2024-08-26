@@ -5,10 +5,6 @@ on:
   push:
     branches: [main]
 
-concurrency:
-  group: "format"
-  cancel-in-progress: false
-
 jobs:
   test:
     runs-on: ubuntu-latest
