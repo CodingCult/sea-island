@@ -1,10 +1,4 @@
-import {
-    Application,
-    Assets,
-    FederatedPointerEvent,
-    Point,
-    Sprite,
-} from "pixi.js";
+import { Application, Assets, FederatedPointerEvent, Sprite } from "pixi.js";
 import andreURI from "../assets/characters/andre.png";
 import backgroundURI from "../assets/background.png";
 
@@ -36,7 +30,7 @@ export class Game {
         andre.x = this.app.renderer.width / 2;
         andre.y = this.app.renderer.height / 2;
 
-        andre.on("click", (event) => {
+        andre.on("click", (_event) => {
             alert("hehhe");
         });
 
