@@ -1,0 +1,32 @@
+name: Format
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: "format"
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run Prettier and commit changes
+        run: |
+          npx prettier -w .
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "style: format with prettier" || echo "No changes to commit"
+          git push
