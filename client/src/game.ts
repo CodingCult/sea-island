@@ -1,5 +1,12 @@
-import { Application, Assets, Sprite } from "pixi.js";
+import {
+    Application,
+    Assets,
+    FederatedPointerEvent,
+    Point,
+    Sprite,
+} from "pixi.js";
 import andreURI from "../assets/characters/andre.png";
+import backgroundURI from "../assets/background.png";
 
 export class Game {
     app = new Application();
@@ -14,7 +21,9 @@ export class Game {
             height: 1080,
             eventFeatures: {
                 move: true,
+                click: true,
             },
+            eventMode: "static",
         });
         this.app.canvas.style.imageRendering = "pixelated";
         document.body.appendChild(this.app.canvas);
@@ -27,12 +36,18 @@ export class Game {
         andre.x = this.app.renderer.width / 2;
         andre.y = this.app.renderer.height / 2;
 
+        andre.on("click", (event) => {
+            alert("hehhe");
+        });
+
+        this.app.stage.addChild(new Sprite(await Assets.load(backgroundURI)));
         this.app.stage.addChild(andre!);
 
-        this.app.ticker.add(() => this.update(this));
-        this.app.stage.on("mousemove", (event) => {
-            console.log(event.x, event.y);
-        });
+        this.app.ticker.add(() => this.update());
+
+        this.app.stage.on("pointermove", (event) =>
+            this.handleMouseMove(event),
+        );
 
         document.addEventListener("keydown", (event) => {
             this.pressedKeys.add(event.key.toLowerCase());
@@ -43,13 +58,24 @@ export class Game {
         });
     }
 
-    update(self: Game) {
-        const deltaTime = self.app.ticker.deltaMS / 1000;
-        const andre = self.sprites.get("andre")!;
-        if (self.pressedKeys.has("a")) {
+    handleMouseMove(event: FederatedPointerEvent) {
+        const scaleX = this.app.renderer.width / window.innerWidth;
+        const scaleY = this.app.renderer.height / window.innerHeight;
+        const [x, y] = [event.x * scaleX, event.y * scaleY];
+
+        const andre = this.sprites.get("andre")!;
+
+        const theta = Math.atan2(y - andre.y, x - andre.x);
+        andre.rotation = theta;
+    }
+
+    update() {
+        const deltaTime = this.app.ticker.deltaMS / 1000;
+        const andre = this.sprites.get("andre")!;
+        if (this.pressedKeys.has("a")) {
             andre.x -= 200 * deltaTime;
         }
-        if (self.pressedKeys.has("d")) {
+        if (this.pressedKeys.has("d")) {
             andre.x += 200 * deltaTime;
         }
     }
