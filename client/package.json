@@ -4,18 +4,23 @@
         "build": "webpack --mode development",
         "build-prod": "webpack --mode production",
         "dev": "webpack serve --open",
-        "serve": "serve dist"
+        "serve": "serve dist",
+        "lint": "eslint ."
     },
     "dependencies": {
         "pixi.js": "^8.3.4"
     },
     "devDependencies": {
+        "@eslint/js": "^9.9.1",
         "css-loader": "^7.1.2",
+        "eslint": "^9.9.1",
+        "globals": "^15.9.0",
         "html-webpack-plugin": "^5.6.0",
         "serve": "^14.2.3",
         "style-loader": "^4.0.0",
         "ts-loader": "^9.5.1",
         "typescript": "^5.5.4",
+        "typescript-eslint": "^8.3.0",
         "webpack": "^5.94.0",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^5.0.4"
