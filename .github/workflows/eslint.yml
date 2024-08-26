@@ -1,4 +1,4 @@
-name: ESLint
+name: Check ESLint
 
 on:
   push:
@@ -27,11 +27,4 @@ jobs:
         run: npm ci
 
       - name: Run ESLint
-        run: npm run lint -- --format html -o eslint-report.html
-
-      - name: Upload ESLint report
-        if: failure() # Only upload if the previous step fails
-        uses: actions/upload-artifact@v4
-        with:
-          name: eslint-report
-          path: client/eslint-report.html
+        run: npm run lint
