@@ -19,6 +19,10 @@ module.exports = (env, argv) => {
                     use: ["style-loader", "css-loader"],
                     exclude: /node_modules/,
                 },
+                {
+                    test: /\.(png|svg)$/i,
+                    type: "asset/resource",
+                },
             ],
         },
         resolve: {

@@ -1,14 +1,14 @@
 {
     "compilerOptions": {
         "target": "esnext",
-        "module": "nodenext",
+        "module": "es6",
         "strict": true,
-        "moduleResolution": "nodenext",
+        "moduleResolution": "node",
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
         "outDir": "./dist",
         "rootDir": "./src"
     },
-    "include": ["src/**/*", "assets"]
+    "include": ["src/**/*", "assets.d.ts"]
 }
