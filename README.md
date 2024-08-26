@@ -21,6 +21,9 @@
             ---------------
 ```
 
+-   map that u can teleport to places youve checkpointed / reached :3333
+    -   early unlockable that comes in a bottle and celia opens it
+
 ## FUTURE feat. cole
 
 -   multiplayer
