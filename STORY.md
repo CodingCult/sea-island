@@ -1,16 +1,16 @@
 # Story
 
--   AU metro vancouver
--   sea island
--   shopkeeper andré comes on the skytrain
-    -   the skytrain is in a sky
--   main character is a female frog celia
--   the story
-    -   the frog is curious
-    -   follows a cat out of pond
-    -   fraser river into sea island
--   the cat introduces himself as wynn
--   ... to be decided
+- AU metro vancouver
+- sea island
+- shopkeeper andré comes on the skytrain
+  - the skytrain is in a sky
+- main character is a female frog celia
+- the story
+  - the frog is curious
+  - follows a cat out of pond
+  - fraser river into sea island
+- the cat introduces himself as wynn
+- ... to be decided
 
 celia's born as a tadpole and lives in a small pond in richmond. she slowly grows in her pond by
 swimming through obstacles and collecting food, gaining and losing abilities as she turns into a
