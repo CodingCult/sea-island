@@ -1,18 +1,33 @@
 # Story
 
+## Stages
+
+- pond in delta
+  - tadpole
+  - eat algae
+- follows a cat out of pond along a stream
+- FRASER RIVER 1
+- south arm marshes
+  - grows into frog
+  - start collecting flies
+- FRASER RIVER 2
+- steveston
+  - sell flies to sarah
+  - flowers
+- STRAIT OF GEORGIA
+- sea island
+  - rockslide
+  - airport
+
+## Story Details
+
 - AU metro vancouver
 - sea island
 - shopkeeper andré comes on the skytrain
   - the skytrain is in a sky
 - main character is a female frog celia
-- the story
-  - the frog is curious
-  - follows a cat out of pond
-  - fraser river into sea island
-- the cat introduces himself as wynn
-- ... to be decided
 
-celia's born as a tadpole and lives in a small pond in richmond. she slowly grows in her pond by
+celia's born as a tadpole and lives in a small pond in delta. she slowly grows in her pond by
 swimming through obstacles and collecting food, gaining and losing abilities as she turns into a
 frog. just before she loses her tail completely, she sees a cat who introduces himself as wynn.
 his fur is black but he glows blue (unclear whether this is in reality or just a visual)
