@@ -4,6 +4,24 @@ Thank you for your interest in contributing to Sea Island! We appreciate your he
 
 ## How to Contribute
 
+### Building the Project
+
+To get started with development, clone the repository and run the `dev` command to start a development server.
+
+```bash
+git clone https://github.com/CodingCult/sea-island.git
+cd client
+npm install
+npm run dev
+```
+
+### Repository Branches
+
+- **main**: major/minor releases (currently early early early development)
+- **docs/story**: changes to the story/plans for game
+- **feat/name**: development for new feature
+- **fix/name**: changes to fix bug
+
 ### Reporting Issues
 
 1. **Search Existing Issues**: Before opening a new issue, please check if it has already been reported. You can use the search feature in the Issues tab.
@@ -21,11 +39,9 @@ Thank you for your interest in contributing to Sea Island! We appreciate your he
 
 ### Code of Conduct
 
-Please read and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). We strive to create a welcoming and inclusive environment for all contributors.
+Please read and adhere to our [Code of Conduct](/.github/CODE_OF_CONDUCT.md). We strive to create a welcoming and inclusive environment for all contributors.
 
 ## Additional Resources
-
-- [Project Documentation](404)
 
 If you have any questions or need further assistance, please feel free to reach out to the project maintainers.
 
