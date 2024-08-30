@@ -1,4 +1,10 @@
-import { Application, Assets, FederatedPointerEvent, Sprite } from "pixi.js";
+import {
+    Application,
+    Assets,
+    FederatedPointerEvent,
+    Sprite,
+    Text,
+} from "pixi.js";
 import andreURI from "../assets/characters/andre.png";
 import backgroundURI from "../assets/background.png";
 
@@ -6,6 +12,7 @@ export class Game {
     app = new Application();
     sprites = new Map<string, Sprite>();
     pressedKeys = new Set<string>();
+    mousePosition = [0, 0];
 
     constructor() {}
 
@@ -34,8 +41,22 @@ export class Game {
             alert("hehhe");
         });
 
-        this.app.stage.addChild(new Sprite(await Assets.load(backgroundURI)));
-        this.app.stage.addChild(andre!);
+        const text = new Text({
+            text: "0 fps",
+            style: {
+                fontFamily: "Arial",
+                fontSize: 48,
+                fill: 0xffffff,
+                align: "center",
+            },
+        });
+        text.label = "fpsText";
+
+        this.app.stage.addChild(
+            new Sprite(await Assets.load(backgroundURI)),
+            andre,
+            text,
+        );
 
         this.app.ticker.add(() => this.update());
 
@@ -50,17 +71,16 @@ export class Game {
         document.addEventListener("keyup", (event) => {
             this.pressedKeys.delete(event.key.toLowerCase());
         });
+
+        setInterval(() => {
+            (this.app.stage.getChildrenByLabel("fpsText")[0] as Text).text =
+                Math.floor(this.app.ticker.FPS) + " fps";
+        }, 500);
     }
 
     handleMouseMove(event: FederatedPointerEvent) {
-        const scaleX = this.app.renderer.width / window.innerWidth;
-        const scaleY = this.app.renderer.height / window.innerHeight;
-        const [x, y] = [event.x * scaleX, event.y * scaleY];
-
-        const andre = this.sprites.get("andre")!;
-
-        const theta = Math.atan2(y - andre.y, x - andre.x);
-        andre.rotation = theta;
+        const [x, y] = [event.globalX, event.globalY];
+        this.mousePosition = [x, y];
     }
 
     update() {
@@ -72,5 +92,8 @@ export class Game {
         if (this.pressedKeys.has("d")) {
             andre.x += 200 * deltaTime;
         }
+        const [x, y] = this.mousePosition;
+        const theta = Math.atan2(y - andre.y, x - andre.x);
+        andre.rotation = theta;
     }
 }
