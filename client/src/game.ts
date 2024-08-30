@@ -1,10 +1,4 @@
-import {
-    Application,
-    Assets,
-    FederatedPointerEvent,
-    Sprite,
-    Text,
-} from "pixi.js";
+import { Application, Assets, Sprite, Text } from "pixi.js";
 import andreURI from "../assets/characters/andre.png";
 import backgroundURI from "../assets/background.png";
 
@@ -12,7 +6,6 @@ export class Game {
     app = new Application();
     sprites = new Map<string, Sprite>();
     pressedKeys = new Set<string>();
-    mousePosition = [0, 0];
 
     constructor() {}
 
@@ -60,10 +53,6 @@ export class Game {
 
         this.app.ticker.add(() => this.update());
 
-        this.app.stage.on("pointermove", (event) =>
-            this.handleMouseMove(event),
-        );
-
         document.addEventListener("keydown", (event) => {
             this.pressedKeys.add(event.key.toLowerCase());
         });
@@ -78,11 +67,6 @@ export class Game {
         }, 500);
     }
 
-    handleMouseMove(event: FederatedPointerEvent) {
-        const [x, y] = [event.globalX, event.globalY];
-        this.mousePosition = [x, y];
-    }
-
     update() {
         const deltaTime = this.app.ticker.deltaMS / 1000;
         const andre = this.sprites.get("andre")!;
@@ -92,8 +76,5 @@ export class Game {
         if (this.pressedKeys.has("d")) {
             andre.x += 200 * deltaTime;
         }
-        const [x, y] = this.mousePosition;
-        const theta = Math.atan2(y - andre.y, x - andre.x);
-        andre.rotation = theta;
     }
 }
