@@ -1,5 +1,5 @@
-import { Game } from "./game";
-import "./styles.css";
+import { Game } from "@/game";
+import "@/styles.css";
 
 (async () => {
     const game = new Game();

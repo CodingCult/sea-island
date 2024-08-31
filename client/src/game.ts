@@ -1,6 +1,6 @@
 import { Application, Assets, Sprite, Text } from "pixi.js";
-import andreURI from "../assets/characters/andre.png";
-import backgroundURI from "../assets/background.png";
+import backgroundURI from "@/assets/background.png";
+import Andre from "@/entities/andre";
 
 export class Game {
     app = new Application();
@@ -22,13 +22,11 @@ export class Game {
         this.app.canvas.style.imageRendering = "pixelated";
         document.body.appendChild(this.app.canvas);
 
-        this.sprites.set("andre", new Sprite(await Assets.load(andreURI)));
-        const andre = this.sprites.get("andre")!;
-        andre.texture.source.scaleMode = "nearest";
-        andre.anchor.set(0.5, 0.5);
-        andre.setSize(128);
-        andre.x = this.app.renderer.width / 2;
-        andre.y = this.app.renderer.height / 2;
+        // this.sprites.set("andre", new Sprite(await Assets.load(andreURI)));
+        this.sprites.set("andre", new Andre());
+        const andre = this.sprites.get("andre") as Andre;
+        andre.realPosition.x = this.app.renderer.width / 2;
+        andre.realPosition.y = this.app.renderer.height * 0.1;
 
         andre.on("click", (_event) => {
             alert("hehhe");
@@ -69,12 +67,26 @@ export class Game {
 
     update() {
         const deltaTime = this.app.ticker.deltaMS / 1000;
-        const andre = this.sprites.get("andre")!;
+        const andre = this.sprites.get("andre")! as Andre;
+
+        andre.update(deltaTime);
+
+        this.handleInput();
+    }
+
+    handleInput() {
+        const deltaTime = this.app.ticker.deltaMS / 1000;
+        const andre = this.sprites.get("andre")! as Andre;
+
         if (this.pressedKeys.has("a")) {
-            andre.x -= 200 * deltaTime;
+            andre.realPosition.x -= 300 * deltaTime;
         }
         if (this.pressedKeys.has("d")) {
-            andre.x += 200 * deltaTime;
+            andre.realPosition.x += 300 * deltaTime;
+        }
+        if (this.pressedKeys.has(" ") && andre.canJump) {
+            andre.velocity.y = 400;
+            andre.canJump = false;
         }
     }
 }

@@ -1,6 +1,7 @@
 import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
 import { fileURLToPath } from "url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -31,6 +32,7 @@ export default (_env, argv) => {
         },
         resolve: {
             extensions: [".ts", ".js"],
+            plugins: [new TsconfigPathsPlugin()],
         },
         output: {
             filename: "bundle.js",
