@@ -42,4 +42,3 @@ If you have any questions or feedback, feel free to reach out to us via issue tr
 - multiplayer (much later)
 - long dialogue should have **bolded** text for important keywords
 - stereo audio (optional?)
-
