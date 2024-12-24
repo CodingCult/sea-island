@@ -1,6 +1,6 @@
 # Sea Island
 
-**Sea Island** is an open-source web-based game currently in very early development. Our goal is to create a fun and engaging platform game that can be enjoyed by players around the world! The game is a platformer designed to be played directly in the web browser. We welcome contributions from the community to help shape and improve the game.
+**Sea Island** is an open-source game currently in very early development. Our goal is to create a fun and engaging platformer game that can be enjoyed by players around the world! We welcome contributions from the community to help shape and improve the game.
 
 ## Contributing
 
@@ -16,7 +16,7 @@ If you have any questions or feedback, feel free to reach out to us via issue tr
 
 ## Plans for Project
 
-- typescript
+- godot engine
 - pixel art (cole)
 - platformer
 - music
