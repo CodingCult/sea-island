@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2afc1k5sphat"]
+
+[ext_resource type="PackedScene" uid="uid://38g3qav062g5" path="res://Charcters/celia.tscn" id="1_6bmsy"]
+[ext_resource type="Texture2D" uid="uid://d22nikb6b3w76" path="res://Assets/icon.svg" id="2_hb8iv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3na6j"]
+size = Vector2(869, 124)
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="Celia" parent="." instance=ExtResource("1_6bmsy")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(247.5, 222)
+shape = SubResource("RectangleShape2D_3na6j")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(248, 222.5)
+scale = Vector2(6.75, 0.945313)
+texture = ExtResource("2_hb8iv")
