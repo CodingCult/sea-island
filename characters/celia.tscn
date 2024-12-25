@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://38g3qav062g5"]
 
-[ext_resource type="Script" path="res://Charcters/celia.gd" id="1_kpfsv"]
-[ext_resource type="Texture2D" uid="uid://c28wobd7mudhp" path="res://Assets/celia_spritesheet.png" id="2_koo63"]
+[ext_resource type="Script" path="res://characters/celia.gd" id="1_kpfsv"]
+[ext_resource type="Texture2D" uid="uid://c28wobd7mudhp" path="res://assets/celia_spritesheet.png" id="2_koo63"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iie2s"]
 size = Vector2(16, 16)

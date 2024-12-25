@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2afc1k5sphat"]
 
-[ext_resource type="PackedScene" uid="uid://38g3qav062g5" path="res://Charcters/celia.tscn" id="1_6bmsy"]
-[ext_resource type="Texture2D" uid="uid://d22nikb6b3w76" path="res://Assets/icon.svg" id="2_hb8iv"]
+[ext_resource type="PackedScene" uid="uid://38g3qav062g5" path="res://characters/celia.tscn" id="1_6bmsy"]
+[ext_resource type="Texture2D" uid="uid://d22nikb6b3w76" path="res://assets/icon.svg" id="2_hb8iv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3na6j"]
 size = Vector2(869, 124)
