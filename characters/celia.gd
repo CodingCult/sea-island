@@ -46,6 +46,7 @@ func _physics_process(delta):
             else:
                 velocity.y = JUMP_VELOCITY * 0.5
     else:
-        velocity.x = move_toward(velocity.x, 0, delta * SPEED / 0.2) # Stops in 0.2s
+        velocity.x = move_toward(velocity.x, 0, SPEED) # Stops in 0s
+        # velocity.x = move_toward(velocity.x, 0, delta * SPEED / 0.2) # Stops in 0.2s
 
     move_and_slide()
