@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c28wobd7mudhp" path="res://assets/celia_spritesheet.png" id="2_koo63"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iie2s"]
-size = Vector2(32, 32)
+size = Vector2(16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m3l3i"]
 atlas = ExtResource("2_koo63")
@@ -67,7 +67,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q4v80")
 }, {
-"duration": 1.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_884a2")
 }, {
 "duration": 1.0,
@@ -81,7 +81,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [node name="Celia" type="CharacterBody2D"]
@@ -92,10 +92,8 @@ shape = SubResource("RectangleShape2D_iie2s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 0)
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_v8012")
-frame = 7
-frame_progress = 0.753793
+frame_progress = 0.759413
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
