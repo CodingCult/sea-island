@@ -1,6 +1,7 @@
 .DS_Store
 
 *.kra~
+*.png~
 
 # Godot 4+ specific ignores
 .godot/

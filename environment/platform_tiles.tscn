@@ -30,8 +30,13 @@ texture = ExtResource("1_73u0t")
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0/terrains_peering_bit/top_side = 0
 1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 1
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0/terrains_peering_bit/top_side = 0
 2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 1
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -55,8 +60,10 @@ texture = ExtResource("1_73u0t")
 [sub_resource type="TileSet" id="TileSet_q6y2m"]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/name = " Platform"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+terrain_set_0/terrain_1/name = "Water"
+terrain_set_0/terrain_1/color = Color(0.321569, 0.321569, 0.972549, 1)
 sources/0 = SubResource("TileSetAtlasSource_kgec0")
 
 [node name="Tiles" type="TileMapLayer"]
