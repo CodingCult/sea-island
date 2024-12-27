@@ -6,7 +6,10 @@ const JUMP_VELOCITY := -400.0
 
 @onready var animated_sprite := $AnimatedSprite2D
 var jumped := false
-# var fast_falling := false
+var count := 0
+var jump_wait := 0.0
+
+signal change_debug_label(text: String)
 
 func _process(_delta):
     animated_sprite.play("default")
@@ -20,20 +23,21 @@ func _process(_delta):
 func _physics_process(delta):
     # Add the gravity.
     if is_on_floor():
-        # fast_falling = false
         jumped = false
     else:
         velocity += get_gravity() * delta
-    
-    # Fast fall to give player more control
-    # if Input.is_action_just_released("jump") and jumped:
-    #     fast_falling = true
-    
-    # if fast_falling:
-    #     velocity += get_gravity() * delta * 0.75
+
+    if is_on_wall_only():
+        var jump_direction := get_slide_collision(0).get_normal().x
+
+        velocity.y = JUMP_VELOCITY * 0.75
+        velocity.x = jump_direction * SPEED * 0.5
+        jump_wait = 0.1
+
+    jump_wait -= delta
 
     var direction := Input.get_axis("left", "right")
-    if direction:
+    if direction and jump_wait <= 0:
         velocity.x = direction * SPEED
 
         # Auto jumps if Celia is moving horizontally
@@ -45,7 +49,7 @@ func _physics_process(delta):
                 velocity.y = JUMP_VELOCITY
             else:
                 velocity.y = JUMP_VELOCITY * 0.25
-    else:
+    elif jump_wait <= 0:
         velocity.x = move_toward(velocity.x, 0, SPEED) # Stops in 0s
         # velocity.x = move_toward(velocity.x, 0, delta * SPEED / 0.2) # Stops in 0.2s
 
