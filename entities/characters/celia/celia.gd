@@ -8,7 +8,7 @@ const JUMP_VELOCITY := -400.0
 
 var jumped := false
 var jump_wait := 0.0
-var last_direction := 1
+var last_direction := 1.0
 
 func _process(_delta):
     var direction := Input.get_axis("left", "right")
