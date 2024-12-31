@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://brafh2rwfwfwf"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dpyv15dehwsyn"]
 
-[ext_resource type="Texture2D" uid="uid://cht4p8dbrxrkb" path="res://assets/tiles.png" id="1_73u0t"]
+[ext_resource type="Texture2D" uid="uid://cht4p8dbrxrkb" path="res://assets/tiles.png" id="1_xgb6h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kgec0"]
-texture = ExtResource("1_73u0t")
+texture = ExtResource("1_xgb6h")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -57,7 +57,7 @@ texture = ExtResource("1_73u0t")
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_q6y2m"]
+[resource]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = " Platform"
@@ -65,6 +65,3 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 terrain_set_0/terrain_1/name = "Water"
 terrain_set_0/terrain_1/color = Color(0.321569, 0.321569, 0.972549, 1)
 sources/0 = SubResource("TileSetAtlasSource_kgec0")
-
-[node name="Tiles" type="TileMapLayer"]
-tile_set = SubResource("TileSet_q6y2m")

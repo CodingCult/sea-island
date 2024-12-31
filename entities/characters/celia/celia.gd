@@ -9,10 +9,7 @@ var jumped := false
 var count := 0
 var jump_wait := 0.0
 
-signal change_debug_label(text: String)
-
 func _process(_delta):
-    animated_sprite.play("default")
     var direction := Input.get_axis("left", "right")
 
     # If no direction, don't flip Celia

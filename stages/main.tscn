@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=4 uid="uid://d3e3riuqrv0i0"]
+
+[ext_resource type="PackedScene" uid="uid://38g3qav062g5" path="res://entities/characters/celia/celia.tscn" id="1_6bmsy"]
+[ext_resource type="Script" path="res://stages/main_manager.gd" id="1_p1gnt"]
+[ext_resource type="PackedScene" uid="uid://cfd51umywi244" path="res://environment/checkpoint/checkpoint.tscn" id="3_ibfix"]
+[ext_resource type="TileSet" uid="uid://dpyv15dehwsyn" path="res://assets/platforms.tres" id="3_tfile"]
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="MainManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_p1gnt")
+
+[node name="Checkpoint" parent="MainManager" instance=ExtResource("3_ibfix")]
+position = Vector2(474, -107)
+
+[node name="Celia" parent="." instance=ExtResource("1_6bmsy")]
+z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="Celia"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DebugLabel" type="Label" parent="UI"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Debug Log"
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Environment"]
+tile_map_data = PackedByteArray("AAAcAAIAAAABAAAAAAAbAAIAAAABAAAAAAAaAAIAAAABAAAAAAAZAAIAAAABAAAAAAAYAAIAAAABAAAAAAAXAAIAAAABAAAAAAAWAAIAAAABAAAAAAAVAAIAAAABAAAAAAAUAAIAAAABAAAAAAATAAIAAAABAAAAAAASAAIAAAABAAAAAAARAAIAAAABAAAAAAAQAAIAAAABAAAAAAAPAAIAAAABAAAAAAAOAAIAAAABAAAAAAANAAIAAAABAAAAAAAMAAIAAAABAAAAAAALAAIAAAABAAAAAAAKAAIAAAABAAAAAAAJAAIAAAABAAAAAAAIAAIAAAABAAAAAAAHAAIAAAABAAAAAAAGAAIAAAABAAAAAAAFAAIAAAABAAAAAAAEAAIAAAABAAAAAAADAAIAAAABAAAAAAACAAIAAAABAAAAAAABAAIAAAABAAAAAAAAAAIAAAABAAAAAAD//wIAAAABAAAAAAD+/wIAAAABAAAAAAD9/wIAAAABAAAAAAD8/wIAAAABAAAAAAD7/wIAAAABAAAAAAD6/wIAAAAAAAAAAAAPAP7/AAAAAAAAAAAQAP7/AAABAAAAAAARAP7/AAABAAAAAAASAP7/AAABAAAAAAATAP7/AAABAAAAAAAUAP7/AAABAAAAAAAVAP7/AAABAAAAAAAWAP7/AAABAAAAAAAXAP7/AAACAAAAAAAdAPr/AAACAAAAAAAcAPr/AAAAAAAAAAAgAAIAAAABAAAAAAAfAAIAAAABAAAAAAAeAAIAAAABAAAAAAAdAAIAAAABAAAAAAAkAAIAAAACAAAAAAAjAAIAAAABAAAAAAAiAAIAAAABAAAAAAAhAAIAAAABAAAAAAA=")
+tile_set = ExtResource("3_tfile")
+
+[connection signal="body_entered" from="MainManager/Checkpoint" to="." method="_on_checkpoint_body_entered"]
