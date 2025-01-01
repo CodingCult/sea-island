@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://d3e3riuqrv0i0"]
+[gd_scene load_steps=8 format=4 uid="uid://d3e3riuqrv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://38g3qav062g5" path="res://entities/characters/celia/celia.tscn" id="1_6bmsy"]
+[ext_resource type="PackedScene" uid="uid://dub6e6fkj7217" path="res://misc/camera.tscn" id="1_bu6qq"]
 [ext_resource type="Script" path="res://stages/main_manager.gd" id="1_p1gnt"]
 [ext_resource type="PackedScene" uid="uid://cfd51umywi244" path="res://environment/checkpoint/checkpoint.tscn" id="3_ibfix"]
 [ext_resource type="TileSet" uid="uid://dpyv15dehwsyn" path="res://assets/platforms.tres" id="3_tfile"]
@@ -10,14 +11,15 @@
 
 [node name="MainLevel" type="Node2D"]
 
-[node name="Celia" parent="." instance=ExtResource("1_6bmsy")]
-z_index = 1
-
-[node name="Camera2D" type="Camera2D" parent="Celia"]
+[node name="Camera" parent="." instance=ExtResource("1_bu6qq")]
 limit_left = -300
 limit_top = -300
 limit_right = 700
-limit_bottom = 150
+limit_bottom = 90
+
+[node name="Celia" parent="." instance=ExtResource("1_6bmsy")]
+unique_name_in_owner = true
+z_index = 1
 
 [node name="UI" type="CanvasLayer" parent="."]
 
