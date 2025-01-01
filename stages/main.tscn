@@ -1,13 +1,19 @@
-[gd_scene load_steps=10 format=4 uid="uid://d3e3riuqrv0i0"]
+[gd_scene load_steps=13 format=4 uid="uid://d3e3riuqrv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://38g3qav062g5" path="res://entities/characters/celia/celia.tscn" id="1_6bmsy"]
 [ext_resource type="PackedScene" uid="uid://dub6e6fkj7217" path="res://misc/camera.tscn" id="1_bu6qq"]
 [ext_resource type="Script" path="res://stages/main_manager.gd" id="1_p1gnt"]
 [ext_resource type="PackedScene" uid="uid://cfd51umywi244" path="res://environment/checkpoint/checkpoint.tscn" id="3_ibfix"]
 [ext_resource type="TileSet" uid="uid://dpyv15dehwsyn" path="res://assets/midground.tres" id="3_tfile"]
+[ext_resource type="FontFile" uid="uid://dudmpko5elh6u" path="res://assets/fonts/PixelOperator8.ttf" id="3_xfksn"]
+[ext_resource type="Script" path="res://stages/fps.gd" id="4_sdtsk"]
 [ext_resource type="TileSet" uid="uid://d2d25r621vxhi" path="res://assets/foreground.tres" id="5_3le4j"]
 [ext_resource type="PackedScene" uid="uid://bs83dg85ui0h0" path="res://environment/kill_zone/kill_zone.tscn" id="5_8jqby"]
 [ext_resource type="TileSet" uid="uid://dm6garyqbll4i" path="res://assets/background.tres" id="5_ivl7g"]
+
+[sub_resource type="Theme" id="Theme_8wose"]
+default_font = ExtResource("3_xfksn")
+default_font_size = 8
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7l617"]
 
@@ -23,15 +29,21 @@ limit_bottom = 90
 unique_name_in_owner = true
 
 [node name="UI" type="CanvasLayer" parent="."]
-visible = false
 
-[node name="DebugLabel" type="Label" parent="UI"]
+[node name="FPS" type="Label" parent="UI"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Debug Log"
+theme = SubResource("Theme_8wose")
+text = "FPS: 0"
+script = ExtResource("4_sdtsk")
+
+[node name="FPSUpdate" type="Timer" parent="UI/FPS"]
+autostart = true
 
 [node name="MainManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -62,4 +74,5 @@ position = Vector2(0, 150)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/KillZone"]
 shape = SubResource("WorldBoundaryShape2D_7l617")
 
+[connection signal="timeout" from="UI/FPS/FPSUpdate" to="UI/FPS" method="_on_fps_update_timeout"]
 [connection signal="body_entered" from="MainManager/Checkpoint" to="." method="_on_checkpoint_body_entered"]
