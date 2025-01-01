@@ -10,6 +10,7 @@ var jumped := false
 var jump_wait := 0.0
 var last_direction := 1.0
 
+
 func _process(_delta):
     var direction := Input.get_axis("left", "right")
 
@@ -18,15 +19,25 @@ func _process(_delta):
         animated_sprite.flip_h = direction < 0
 
 
-func _physics_process(delta):
+func _physics_process(delta: float):
+    jump_wait -= delta
+
+    handle_gravity(delta)
+    handle_wall_jump()
+    handle_user_movement()
+    
+    move_and_slide()
+
+
+func handle_gravity(delta: float):
     # Add the gravity.
     if is_on_floor():
         jumped = false
     else:
         velocity += get_gravity() * delta
-        
-    jump_wait -= delta
 
+
+func handle_wall_jump():
     # If Celia hits a wall after jumping, auto wall-jump.
     if is_on_wall_only() and jumped:
         var jump_direction := get_slide_collision(0).get_normal().x
@@ -35,6 +46,8 @@ func _physics_process(delta):
         velocity.x = jump_direction * SPEED * 0.5
         jump_wait = 0.2
 
+
+func handle_user_movement():
     var input_direction := Input.get_axis("left", "right")
     if input_direction: last_direction = input_direction
     
@@ -53,5 +66,3 @@ func _physics_process(delta):
         velocity.x = SPEED * input_direction
     elif jump_wait <= 0:
         velocity.x = 0
-    
-    move_and_slide()
