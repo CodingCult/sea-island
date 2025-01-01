@@ -85,6 +85,7 @@ animations = [{
 size = Vector2(14, 14)
 
 [node name="Celia" type="CharacterBody2D"]
+z_index = 1
 position = Vector2(0, -8)
 collision_layer = 2
 script = ExtResource("1_kpfsv")
