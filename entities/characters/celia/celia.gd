@@ -25,6 +25,7 @@ func _physics_process(delta: float):
     handle_gravity(delta)
     handle_wall_jump()
     handle_user_movement()
+    handle_damage_collisions()
     
     move_and_slide()
 
@@ -66,3 +67,19 @@ func handle_user_movement():
         velocity.x = SPEED * input_direction
     elif jump_wait <= 0:
         velocity.x = 0
+
+func handle_damage_collisions():
+    for i in range(get_slide_collision_count()):
+        var collision := get_slide_collision(i)
+        var collider := collision.get_collider()
+        
+        if collider is TileMapLayer:
+            var cell_position := collision.get_position() - collision.get_normal()
+            var cell = collider.local_to_map(cell_position)
+            var tile: TileData = collider.get_cell_tile_data(cell)
+            if not tile:
+                continue
+
+            if tile.get_custom_data("is_damaging"):
+                # "kills" player
+                get_tree().reload_current_scene.call_deferred()
