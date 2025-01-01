@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cht4p8dbrxrkb" path="res://assets/tiles.png" id="1_xgb6h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kgec0"]
+resource_name = "Normal Tiles"
 texture = ExtResource("1_xgb6h")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -14,7 +15,16 @@ texture = ExtResource("1_xgb6h")
 4:1/0 = 0
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/next_alternative_id = 2
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0/custom_data_0 = true
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0/custom_data_0 = true
 
 [resource]
 physics_layer_0/collision_layer = 1
+custom_data_layer_0/name = "damage"
+custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_kgec0")
