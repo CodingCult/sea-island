@@ -13,7 +13,10 @@ config_version=5
 config/name="sea-island"
 run/main_scene="res://stages/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://assets/icon.svg"
+boot_splash/image="res://assets/splash.png"
+boot_splash/use_filter=false
+config/icon="res://assets/icon.png"
+boot_splash/minimum_display_time=1000
 
 [display]
 
