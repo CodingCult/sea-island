@@ -69,18 +69,35 @@ func handle_user_movement():
     elif jump_wait <= 0:
         velocity.x = 0
 
+
+func get_colliding_tiles(collision: KinematicCollision2D) -> Array[TileData]:
+    var collider: TileMapLayer = collision.get_collider()
+    var tiles: Array[TileData] = []
+    var cell_coords := collision.get_position() - collision.get_normal()
+    var cell_position = collider.local_to_map(cell_coords)
+    tiles.push_back(collider.get_cell_tile_data(cell_position))
+    
+    # Handles Celia standing on two tiles
+    if int(cell_coords.x) != 8 and collision.get_normal().y == -1:
+        cell_position.x += 1 if int(cell_position.x) % 16 > 8 else -1
+        tiles.push_back(collider.get_cell_tile_data(cell_position))
+        
+    return tiles
+
+
 func handle_damage_collisions():
+    debug_label.text = ""
     for i in range(get_slide_collision_count()):
         var collision := get_slide_collision(i)
         var collider := collision.get_collider()
         
         if collider is TileMapLayer:
-            var cell_position := collision.get_position() - collision.get_normal()
-            var cell = collider.local_to_map(cell_position)
-            var tile: TileData = collider.get_cell_tile_data(cell)
-            if not tile:
-                continue
+            var colliding_tiles := get_colliding_tiles(collision)
+            for tile in colliding_tiles:
+                if not tile:
+                    continue
 
-            if tile.get_custom_data("is_damaging"):
-                # "kills" player
-                get_tree().reload_current_scene.call_deferred()
+                if tile.get_custom_data("is_damaging"):
+                    # "kills" player
+                    get_tree().reload_current_scene.call_deferred()
+                    return
