@@ -5,6 +5,7 @@ const SPEED := 200.0
 const JUMP_VELOCITY := -400.0
 
 @onready var animated_sprite := $AnimatedSprite2D
+@onready var debug_label: Label = %DEBUG
 
 var jumped := false
 var jump_wait := 0.0
