@@ -100,5 +100,5 @@ func handle_damage_collisions():
 
                 if tile.get_custom_data("is_damaging"):
                     # "kills" player
-                    get_tree().reload_current_scene.call_deferred()
+                    Utils.reload_stage()
                     return
