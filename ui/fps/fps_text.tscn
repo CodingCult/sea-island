@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cu51rgrxydd16"]
 
 [ext_resource type="FontFile" uid="uid://dudmpko5elh6u" path="res://assets/fonts/PixelOperator8.ttf" id="1_m48aj"]
-[ext_resource type="Script" path="res://ui/fps/fps.gd" id="2_gnoev"]
+[ext_resource type="Script" path="res://ui/fps/fps_text.gd" id="2_gnoev"]
 
 [sub_resource type="Theme" id="Theme_8wose"]
 default_font = ExtResource("1_m48aj")
 default_font_size = 8
 
-[node name="FPS" type="Label"]
+[node name="FPSText" type="Label"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
