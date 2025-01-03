@@ -1,12 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://d3e3riuqrv0i0"]
+[gd_scene load_steps=10 format=4 uid="uid://d3e3riuqrv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://38g3qav062g5" path="res://entities/characters/celia/celia.tscn" id="1_6bmsy"]
 [ext_resource type="PackedScene" uid="uid://dub6e6fkj7217" path="res://misc/camera.tscn" id="1_bu6qq"]
-[ext_resource type="Script" path="res://stages/main_manager.gd" id="1_p1gnt"]
-[ext_resource type="PackedScene" uid="uid://cu51rgrxydd16" path="res://ui/fps/fps.tscn" id="3_f2smd"]
 [ext_resource type="PackedScene" uid="uid://cfd51umywi244" path="res://environment/checkpoint/checkpoint.tscn" id="3_ibfix"]
+[ext_resource type="PackedScene" uid="uid://cq8k2ivoydtjg" path="res://ui/game_ui.tscn" id="3_ktiw0"]
 [ext_resource type="TileSet" uid="uid://dpyv15dehwsyn" path="res://assets/midground.tres" id="3_tfile"]
-[ext_resource type="Theme" uid="uid://chcgh4rwv6mum" path="res://assets/ui_theme.tres" id="4_gvnps"]
 [ext_resource type="TileSet" uid="uid://d2d25r621vxhi" path="res://assets/foreground.tres" id="5_3le4j"]
 [ext_resource type="PackedScene" uid="uid://bs83dg85ui0h0" path="res://environment/kill_zone/kill_zone.tscn" id="5_8jqby"]
 [ext_resource type="TileSet" uid="uid://dm6garyqbll4i" path="res://assets/background.tres" id="5_ivl7g"]
@@ -24,25 +22,8 @@ limit_bottom = 90
 [node name="Celia" parent="." instance=ExtResource("1_6bmsy")]
 unique_name_in_owner = true
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="FPS" parent="UI" instance=ExtResource("3_f2smd")]
-
-[node name="DEBUG" type="Label" parent="UI"]
+[node name="GameUI" parent="." instance=ExtResource("3_ktiw0")]
 unique_name_in_owner = true
-offset_left = 1.0
-offset_top = 11.0
-offset_right = 96.0
-offset_bottom = 52.0
-theme = ExtResource("4_gvnps")
-text = "Debug"
-
-[node name="MainManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_p1gnt")
-
-[node name="Checkpoint" parent="MainManager" instance=ExtResource("3_ibfix")]
-position = Vector2(472, -104)
 
 [node name="Environment" type="Node" parent="."]
 
@@ -71,4 +52,7 @@ position = Vector2(0, 150)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/KillZone"]
 shape = SubResource("WorldBoundaryShape2D_7l617")
 
-[connection signal="body_entered" from="MainManager/Checkpoint" to="." method="_on_checkpoint_body_entered"]
+[node name="Checkpoint" parent="Environment" instance=ExtResource("3_ibfix")]
+position = Vector2(472, -104)
+
+[connection signal="body_entered" from="Environment/Checkpoint" to="." method="_on_checkpoint_body_entered"]
