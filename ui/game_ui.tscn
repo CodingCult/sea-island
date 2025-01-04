@@ -1,21 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq8k2ivoydtjg"]
+[gd_scene load_steps=3 format=3 uid="uid://cq8k2ivoydtjg"]
 
 [ext_resource type="PackedScene" uid="uid://cu51rgrxydd16" path="res://ui/fps/fps_text.tscn" id="1_bjykx"]
-[ext_resource type="PackedScene" uid="uid://nuvinf1150tr" path="res://ui/debug/debug_text.tscn" id="2_f6slj"]
-[ext_resource type="Theme" uid="uid://chcgh4rwv6mum" path="res://assets/ui_theme.tres" id="3_wcqaf"]
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_pa8ik"]
 
 [node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_pa8ik")
 
 [node name="FPS" parent="." instance=ExtResource("1_bjykx")]
 offset_right = -282.0
 offset_bottom = -170.0
-
-[node name="DebugText" parent="." instance=ExtResource("2_f6slj")]
-offset_left = 1.0
-offset_top = 11.0
-offset_right = 49.0
-offset_bottom = 19.0
-theme = ExtResource("3_wcqaf")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 1.0

@@ -5,8 +5,6 @@ const SPEED := 200.0
 const JUMP_VELOCITY := -400.0
 
 @onready var animated_sprite := $AnimatedSprite2D
-@onready var game_ui: CanvasLayer = %GameUI
-@onready var debug_text: Label = game_ui.get_node("DebugText")
 
 var jumped := false
 var jump_wait := 0.0
@@ -87,7 +85,7 @@ func get_colliding_tiles(collision: KinematicCollision2D) -> Array[TileData]:
 
 
 func handle_damage_collisions():
-    debug_text.text = ""
+    GameUi.set_debug_text("")
     for i in range(get_slide_collision_count()):
         var collision := get_slide_collision(i)
         var collider := collision.get_collider()
