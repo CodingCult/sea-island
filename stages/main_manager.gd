@@ -4,6 +4,7 @@ extends Node2D
 @onready var fly: Area2D = $Flies/Fly
 
 func _ready() -> void:
+    # TranslationServer.set_locale("fr")
     var packed_scene = PackedScene.new()
     packed_scene.pack(fly)
 
