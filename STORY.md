@@ -61,6 +61,9 @@ buy something.
 andré's a weird character. he wears a turtle hat and kinda whispers to them (diff font). he's
 also crazy and has magic stuff
 
+
+at some point they see richmond flag, celias like "Hmm, i wonder what that flag is for"
+
 ## shop
 
 - flies for a higher price than sarah bought them for
