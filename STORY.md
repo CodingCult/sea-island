@@ -50,8 +50,9 @@ somewhere along the way... bottle with map
 
 wynn tells celia to collect the first flies she sees, then after a while, they come across a
 fisherwoman, susan, fishing at steveston who buys their flies for them to end up with about 20
-gold. celia continues following wynn until there's a rockslide over the tunnel wynn takes and
-they're trapped on opposite sides of it. celia needs to find her way around the tunnel.
+gold. she also gives celia the ability to walljump. celia continues following wynn until there's a
+rockslide over the tunnel wynn takes and they're trapped on opposite sides of it. celia needs to find her
+way around the tunnel.
 
 eventually they reunite just before the bridge to sea island and walk it together (just a really
 simple walking in the rain, holding an umbrella together !!!) on sea island they get to a
