@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://38g3qav062g5"]
+[gd_scene load_steps=16 format=3 uid="uid://38g3qav062g5"]
 
 [ext_resource type="Script" path="res://entities/characters/celia/celia.gd" id="1_kpfsv"]
 [ext_resource type="Texture2D" uid="uid://c28wobd7mudhp" path="res://entities/characters/celia/assets/celia_spritesheet.png" id="2_koo63"]
+[ext_resource type="PackedScene" uid="uid://baoeud2oxwqmj" path="res://entities/characters/celia/tongue.tscn" id="3_a0k8x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m3l3i"]
 atlas = ExtResource("2_koo63")
@@ -99,3 +100,6 @@ frame_progress = 0.759413
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_axor0")
+
+[node name="Tongue" parent="." instance=ExtResource("3_a0k8x")]
+position = Vector2(5, -3)

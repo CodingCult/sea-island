@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var debug_text: Label = $DebugText
+@onready var debug_text: Label = $DebugLabel
 
 
 func set_debug_text(text: String):

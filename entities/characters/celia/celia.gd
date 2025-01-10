@@ -85,7 +85,6 @@ func get_colliding_tiles(collision: KinematicCollision2D) -> Array[TileData]:
 
 
 func handle_damage_collisions():
-    GameUi.set_debug_text("")
     for i in range(get_slide_collision_count()):
         var collision := get_slide_collision(i)
         var collider := collision.get_collider()

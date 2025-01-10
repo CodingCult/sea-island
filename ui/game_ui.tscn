@@ -7,12 +7,12 @@
 script = ExtResource("1_pa8ik")
 
 [node name="FPS" parent="." instance=ExtResource("1_bjykx")]
-offset_right = -282.0
+offset_right = -259.0
 offset_bottom = -170.0
 
-[node name="Label" type="Label" parent="."]
+[node name="DebugLabel" type="Label" parent="."]
 offset_left = 1.0
-offset_top = 21.0
+offset_top = 11.0
 offset_right = 41.0
-offset_bottom = 29.0
+offset_bottom = 19.0
 text = "DEBUG"
