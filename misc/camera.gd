@@ -5,6 +5,13 @@ const SPEED := 128.0
 @onready var celia: CharacterBody2D = %Celia
 
 
+func _ready():
+    var start_position = Game.checkpoint_position
+    var height_level = int(start_position.y / 32)
+    position.x = start_position.x
+    position.y = height_level * 32
+
+
 func _process(delta: float) -> void:
     # Moves to discrete height levels
     var height_level = int(celia.position.y / 32)
