@@ -11,6 +11,11 @@ var jump_wait := 0.0
 var last_direction := 1.0
 
 
+func _ready():
+    Game.celia = self
+    position = Game.checkpoint_position
+
+
 func _process(_delta):
     var direction := Input.get_axis("left", "right")
 
@@ -97,5 +102,5 @@ func handle_damage_collisions():
 
                 if tile.get_custom_data("is_damaging"):
                     # "kills" player
-                    Utils.reload_stage()
+                    Game.handle_player_death()
                     return
