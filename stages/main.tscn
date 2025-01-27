@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://38g3qav062g5" path="res://entities/characters/celia/celia.tscn" id="1_6bmsy"]
 [ext_resource type="PackedScene" uid="uid://dub6e6fkj7217" path="res://misc/camera.tscn" id="1_bu6qq"]
 [ext_resource type="Script" path="res://stages/main_manager.gd" id="1_qj0xf"]
-[ext_resource type="PackedScene" uid="uid://cfd51umywi244" path="res://environment/checkpoint/checkpoint.tscn" id="3_ibfix"]
+[ext_resource type="PackedScene" uid="uid://cfd51umywi244" path="res://environment/warp/warp.tscn" id="3_ibfix"]
 [ext_resource type="TileSet" uid="uid://dpyv15dehwsyn" path="res://assets/midground.tres" id="3_tfile"]
 [ext_resource type="TileSet" uid="uid://d2d25r621vxhi" path="res://assets/foreground.tres" id="5_3le4j"]
 [ext_resource type="PackedScene" uid="uid://bs83dg85ui0h0" path="res://environment/kill_zone/kill_zone.tscn" id="5_8jqby"]
@@ -64,12 +64,10 @@ collision_layer = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/VoidLimit"]
 shape = SubResource("WorldBoundaryShape2D_7l617")
 
-[node name="Checkpoint" parent="Environment" instance=ExtResource("3_ibfix")]
+[node name="Warp" parent="Environment" instance=ExtResource("3_ibfix")]
 position = Vector2(472, -104)
 
 [node name="Flies" type="Node" parent="."]
 
 [node name="Fly" parent="Flies" instance=ExtResource("9_dkbo6")]
 position = Vector2(36, -24)
-
-[connection signal="body_entered" from="Environment/Checkpoint" to="." method="_on_checkpoint_body_entered"]

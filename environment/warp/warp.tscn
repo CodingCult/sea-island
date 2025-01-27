@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cfd51umywi244"]
 
-[ext_resource type="Texture2D" uid="uid://bxymxqssfknx2" path="res://environment/checkpoint/assets/checkpoint_spritesheet.png" id="1_1cv3v"]
-[ext_resource type="Script" path="res://environment/checkpoint/checkpoint.gd" id="1_7beoi"]
+[ext_resource type="Texture2D" uid="uid://bxymxqssfknx2" path="res://environment/warp/assets/warp_spritesheet.png" id="1_1cv3v"]
+[ext_resource type="Script" path="res://environment/warp/warp.gd" id="1_7beoi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lwet7"]
 radius = 4.0
@@ -42,14 +42,14 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="Checkpoint" type="Area2D"]
+[node name="Warp" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_7beoi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lwet7")
 
-[node name="CheckpointSprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kiy0p")
 autoplay = "default"
 frame_progress = 0.0180781
