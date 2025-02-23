@@ -1,6 +1,6 @@
 extends Node
 
-enum Stage {MAIN, POND}
+enum Stage {MAIN, POND, MAIN_MENU, SETTINGS_MENU}
 
 
 func change_stage(new_stage: Stage):
@@ -15,5 +15,7 @@ func reload_stage():
 
 var _stage_dict = {
     Stage.MAIN: "res://stages/main.tscn",
-    Stage.POND: "res://stages/pond.tscn"
+    Stage.POND: "res://stages/pond.tscn",
+    Stage.MAIN_MENU: "res://ui/menus/main_menu.tscn",
+    Stage.SETTINGS_MENU: "res://ui/menus/settings_menu.tscn"
 }
