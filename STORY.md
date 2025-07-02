@@ -3,20 +3,25 @@
 ## Stages
 
 - pond in delta
-  - tadpole
-  - eat algae
-- follows a cat out of pond along a stream
-- FRASER RIVER 1
-- south arm marshes
-  - grows into frog
-  - start collecting flies
-- FRASER RIVER 2
+  - tadpole, snake-like movement
+  - obtain map
+- follows wynn out of delta to annacis island
+  - get flower
+  - andre appears here, hinting at flies being of use.
+  - after he appears flies start to appear
+- rockslide
+  - separated
+  - calls andre
+- sewer
+  - obtain his keys, get double jump
+- jump over rubble
+- queensborough
+- docks
+  - boat to steveston
 - steveston
-  - sell flies to sarah
-  - flowers
-- STRAIT OF GEORGIA
+  - ice cream stores in bg
+- going up the strait of georgia to sea island, main gameplay goes here
 - sea island
-  - rockslide
   - airport
 
 ## Story Details
@@ -53,16 +58,16 @@ cutscene:
 
 "who are you?"\
 "oh hi frog, i'm wynn! the local black cat :3\
-"im celia! nice to meet u :o where are you heading?"\
+"im celia! nice to meet you! where are you heading?"\
 "i'm going to sea island!"\
 "sea island?"
 think: "hmm, i'm curious, might as well follow him."
 
-she follows him down fraser river (there's a sign that says fraser river).
+she follows him up to fraser river (there's a sign that says fraser river).
 
---- 2 levels ---
+--- 1 level ---
 
-she finds out that she likes flowers and gets to choose to wear any flower on her head after seeing them
+here, she finds out that she likes flowers and gets to choose to wear any flower on her head after seeing them
 for the first time:
 
 "wow, so many colors! what are those?"\
@@ -71,7 +76,13 @@ for the first time:
 
 (grid selection screen that looks like a meadow)
 
-somewhere along the way... phone with one number: andré. she presses it and hears...
+they make their way across the fraser river
+
+--- 2 levels ---
+
+### ANNACIS ISLAND
+
+on the coast of annacis island, celia finds a phone with one contact on it: andré. she presses it and hears...
 
 "coming!!!"
 
@@ -79,21 +90,23 @@ and within like 1 second andré arrives in an ice cream truck like thing.
 andré's a weird character. he wears a turtle hat and kinda whispers to them (weird cursive font). he's
 also crazy and has magic stuff.
 
-he gives her a higher jump magic spell, she takes it and now she can jump higher.
-
-"oh! and do you have any flies?"
-"nevermind then... call me when you do!"
+"...got any flies?"
+"nevermind then... call me when you do! ..or if you need help with anything...."
 
 celia continues following wynn
 
+(flies start appearing here)
+
 --- 3 levels ---
+
+### ROCKSLIDE
 
 until there's a rockslide over the tunnel wynn takes and they're trapped on opposite sides of it.
 celia needs to find her way around the tunnel (over), but she can't jump high enough.
 
-"maybe andré can help with this..." she calls him
+"maybe that andré guy can help with this..." she calls him
 
-"hey-"
+"hey, i was wonde-"
 "on my way!!!"
 
 (he arrives)
@@ -114,21 +127,43 @@ andre gives her double jump :O
 
 "i have to rush!"
 
---- 4 levels ---
+--- 2 levels ---
 
-eventually they reunite just before the bridge to sea island, wynn is on a bench:
+### QUEENSBOROUGH
+
+they reunite, wynn is on a bench
 
 "wynn!"
 "hey celia! i was so worried you'd gotten stuck in the rockslide, but i knew you could do it."
 "i'm alright! thank you for waiting."
 
+--- 2 levels ---
+
+### DOCKS
+
+"where are we?"
+"oh, we're at the docks!"
+
+probably like here:
+https://maps.app.goo.gl/QiyfoFsKHb2avtKx8?g_st=ic
+
+they take a boat down to steveston, wynn's friend takes them.
+
+### STEVESTON TO TERRA NOVA
+
+ice cream shops and fun stuff in bg for like 2 levels
+
+--- 6 levels ---
+
+### BRIDGE TO SEA ISLAND
+
 (plane flies past to sea island)
 
-and walk it together (just a really simple walking in the rain, let user hop and follow wynn).
+they walk it together (just a really simple walking in the rain, let user hop and follow wynn).
 
 --- 1 level ---
 
-on sea island:
+### SEA ISLAND
 
 --- 2 levels ---
 
@@ -139,7 +174,7 @@ they get to a skytrain station and find andré wandering. he says hello and the 
 they see richmond flag, celias like "i wonder what that flag is for"
 
 wynn leads her to airport, saying this is where i was going, i wanted to go to paris. hey, hop in my bag!
-(celia peeks out of wynn's bag :D)
+(celia peeks out of wynn's bag :D) and and the turtle in the waterbottle holder if the user got one
 
 last cutscene is them lookign out the window at the stars
 
