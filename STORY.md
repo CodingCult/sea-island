@@ -45,7 +45,7 @@ there are obstacles and the whole thing is basically left to right, maybe 3 leve
 [1][2]
 ```
 
-on second level celia finds a bottle with map. opening it unlocks map that just shows where in greater vancouver she is.
+on second level celia finds a bottle with map. opening it unlocks map that shows where in greater vancouver she is, allows her to teleport to levels she's unlocked.
 
 ### DELTA - frog
 
