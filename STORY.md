@@ -41,7 +41,7 @@ this stage of the game is like snake or pacman movement, tadpole moving in one o
 there are obstacles and the whole thing is basically left to right, maybe 3 levels like this:
 
 ```
-      [3]
+	  [3]
 [1][2]
 ```
 
@@ -187,4 +187,3 @@ fin.
 - $5 frog dye
 - $5 flower dye (for celia's flower)
 - $20 pet turtle (it just follows celia around)
-
