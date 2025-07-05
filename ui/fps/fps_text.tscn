@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cu51rgrxydd16"]
 
 [ext_resource type="FontFile" uid="uid://dudmpko5elh6u" path="res://assets/fonts/PixelOperator8.ttf" id="1_m48aj"]
-[ext_resource type="Script" path="res://ui/fps/fps_text.gd" id="2_gnoev"]
+[ext_resource type="Script" uid="uid://vv7mjaf6p54e" path="res://ui/fps/fps_text.gd" id="2_gnoev"]
 
 [sub_resource type="Theme" id="Theme_8wose"]
 default_font = ExtResource("1_m48aj")

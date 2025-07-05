@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://38g3qav062g5"]
 
-[ext_resource type="Script" path="res://entities/characters/celia/celia.gd" id="1_kpfsv"]
+[ext_resource type="Script" uid="uid://cyirfnmca4lct" path="res://entities/characters/celia/celia.gd" id="1_kpfsv"]
 [ext_resource type="Texture2D" uid="uid://c28wobd7mudhp" path="res://entities/characters/celia/assets/celia_spritesheet.png" id="2_koo63"]
 [ext_resource type="PackedScene" uid="uid://baoeud2oxwqmj" path="res://entities/characters/celia/tongue.tscn" id="3_a0k8x"]
 

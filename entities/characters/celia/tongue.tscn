@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://baoeud2oxwqmj"]
 
-[ext_resource type="Script" path="res://entities/characters/celia/tongue.gd" id="1_5c5w8"]
+[ext_resource type="Script" uid="uid://delvy4kyqdd7v" path="res://entities/characters/celia/tongue.gd" id="1_5c5w8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6al5x"]
 size = Vector2(16, 2)
@@ -85,8 +85,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2om1n"]
 _data = {
-"RESET": SubResource("Animation_r16tk"),
-"attack": SubResource("Animation_31vvr")
+&"RESET": SubResource("Animation_r16tk"),
+&"attack": SubResource("Animation_31vvr")
 }
 
 [node name="Tongue" type="Area2D"]

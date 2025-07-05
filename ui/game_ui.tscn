@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cq8k2ivoydtjg"]
 
 [ext_resource type="PackedScene" uid="uid://cu51rgrxydd16" path="res://ui/fps/fps_text.tscn" id="1_bjykx"]
-[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_pa8ik"]
+[ext_resource type="Script" uid="uid://bk8v6pshrl4vn" path="res://ui/game_ui.gd" id="1_pa8ik"]
 
 [node name="GameUI" type="CanvasLayer"]
 script = ExtResource("1_pa8ik")

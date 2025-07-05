@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw5bnjtvc0ieu"]
 
 [ext_resource type="Texture2D" uid="uid://cujg0s7k6c4ke" path="res://entities/fly/assets/fly.png" id="1_6el2b"]
-[ext_resource type="Script" path="res://entities/fly/fly.gd" id="1_u23dp"]
+[ext_resource type="Script" uid="uid://bark0h58cfv24" path="res://entities/fly/fly.gd" id="1_u23dp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_popgd"]
 radius = 2.0
