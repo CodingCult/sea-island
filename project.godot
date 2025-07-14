@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="sea-island"
-run/main_scene="res://stages/main.tscn"
+run/main_scene="uid://cye3aodonouww"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/use_filter=false
 boot_splash/image="res://assets/splash.png"
@@ -29,7 +29,6 @@ Config="*res://config/config.gd"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
-window/size/mode=4
 window/stretch/mode="viewport"
 
 [gui]

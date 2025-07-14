@@ -25,27 +25,24 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="SettingsMenuLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Settings Menu"
+text = "Settings"
 label_settings = SubResource("LabelSettings_6okhp")
 horizontal_alignment = 1
 
-[node name="CheckButton" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+[node name="SoundToggle" type="CheckButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Sound"
 
-[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+[node name="FullscreenToggle" type="CheckButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-item_count = 2
-popup/item_0/text = "1920x1080"
-popup/item_0/id = 0
-popup/item_1/text = "other test"
-popup/item_1/id = 1
+text = "Full Screen"
 
 [node name="ReturnButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Return"
 
-[connection signal="toggled" from="MarginContainer/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/SoundToggle" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/FullscreenToggle" to="." method="_on_check_button_2_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
