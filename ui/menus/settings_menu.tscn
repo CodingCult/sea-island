@@ -38,7 +38,8 @@ text = "Sound"
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 2
-popup/item_0/text = "woah"
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
 popup/item_1/text = "other test"
 popup/item_1/id = 1
 
@@ -46,4 +47,5 @@ popup/item_1/id = 1
 layout_mode = 2
 text = "Return"
 
+[connection signal="toggled" from="MarginContainer/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

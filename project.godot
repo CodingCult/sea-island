@@ -23,6 +23,7 @@ boot_splash/minimum_display_time=1000
 Utils="*res://common/utils.gd"
 GameUi="*res://ui/game_ui.tscn"
 Game="*res://misc/game.gd"
+Config="*res://config/config.gd"
 
 [display]
 
