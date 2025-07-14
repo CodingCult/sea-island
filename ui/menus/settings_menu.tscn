@@ -39,10 +39,29 @@ text = "Sound"
 layout_mode = 2
 text = "Full Screen"
 
+[node name="ResolutionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resolution"
+horizontal_alignment = 1
+
+[node name="ResolutionSelect" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+selected = 2
+item_count = 4
+popup/item_0/text = "3840x2160"
+popup/item_0/id = 0
+popup/item_1/text = "2560x1440"
+popup/item_1/id = 1
+popup/item_2/text = "1920x1080"
+popup/item_2/id = 2
+popup/item_3/text = "1280x720"
+popup/item_3/id = 3
+
 [node name="ReturnButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Return"
 
 [connection signal="toggled" from="MarginContainer/VBoxContainer/SoundToggle" to="." method="_on_check_button_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/FullscreenToggle" to="." method="_on_check_button_2_toggled"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/ResolutionSelect" to="." method="_on_resolution_select_item_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
