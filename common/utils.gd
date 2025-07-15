@@ -9,6 +9,11 @@ func change_stage(new_stage: Stage):
 	Game.checkpoint_position = Vector2(0,0)
 
 
+func change_stage_raw(new_stage: PackedScene):
+	get_tree().change_scene_to_packed.bind(new_stage).call_deferred()
+	Game.checkpoint_position = Vector2(0, 0)
+
+
 func reload_stage():
 	get_tree().reload_current_scene.call_deferred()
 

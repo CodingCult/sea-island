@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://d3e3riuqrv0i0"]
+[gd_scene load_steps=14 format=4 uid="uid://d3e3riuqrv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://38g3qav062g5" path="res://entities/characters/celia/celia.tscn" id="1_6bmsy"]
 [ext_resource type="PackedScene" uid="uid://dub6e6fkj7217" path="res://misc/camera.tscn" id="1_bu6qq"]
@@ -8,6 +8,7 @@
 [ext_resource type="TileSet" uid="uid://d2d25r621vxhi" path="res://assets/foreground.tres" id="5_3le4j"]
 [ext_resource type="PackedScene" uid="uid://bs83dg85ui0h0" path="res://environment/kill_zone/kill_zone.tscn" id="5_8jqby"]
 [ext_resource type="TileSet" uid="uid://dm6garyqbll4i" path="res://assets/background.tres" id="5_ivl7g"]
+[ext_resource type="PackedScene" uid="uid://by4xi3yqkad6f" path="res://stages/delta/fraser_river.tscn" id="9_06h8b"]
 [ext_resource type="PackedScene" uid="uid://cw5bnjtvc0ieu" path="res://entities/fly/fly.tscn" id="9_dkbo6"]
 [ext_resource type="PackedScene" uid="uid://b5kqdm33lf37w" path="res://environment/checkpoint/checkpoint.tscn" id="9_wtkgd"]
 
@@ -67,6 +68,7 @@ shape = SubResource("WorldBoundaryShape2D_7l617")
 
 [node name="Warp" parent="Environment" instance=ExtResource("3_ibfix")]
 position = Vector2(472, -104)
+metadata/warp_target = ExtResource("9_06h8b")
 
 [node name="Checkpoint" parent="Environment" instance=ExtResource("9_wtkgd")]
 position = Vector2(248, -32)
